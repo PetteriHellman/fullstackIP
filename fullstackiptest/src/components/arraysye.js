@@ -1,6 +1,15 @@
 //ARRAYS
 const BunchOfArrays = (props) => {
-
+    const count = 255
+    const arr = []
+    for (let i = 0; i < count; i++) {
+      arr.push(
+          <div>
+              <li key={i}>192.168.1.{i}</li>
+          </div>
+      );
+    }
+    console.log(arr)
     const t = [1, -1, 3]
     const t2 = t.concat(5)
 
@@ -22,28 +31,9 @@ const BunchOfArrays = (props) => {
  
 return (
     <div>
-      <p>
-        {t.map((num => (
-            <li key={num}>{num}</li>
-        
-        )))}
-        {t2.map((num => (
-            <li key={num}>{num}</li>
-        
-        )))}
-        {c.map((num => (
-            <li key={num}>{num}</li>
-        
-        )))}
-        {m1.map((num => (
-            <li key={num}>{num}</li>
-        
-        )))}
-        {d.map((num => (
-            <li key={num}>{num}</li>
-        
-        )))}
-      </p>
+      
+        {arr}
+      
     </div>
 )
 }
